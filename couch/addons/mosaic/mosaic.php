@@ -199,7 +199,7 @@
                 $obj = &$CTX->get_object( $var );
 
                 if( $obj ){
-                    $rows = $obj['ids'];
+                    $rows = is_array( $obj['ids'] ) ? $obj['ids'] : array();
                     if( !count($rows) ){ return; }
                     $tiles = $obj['tiles'];
 
